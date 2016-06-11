@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="jumbotron ">
+	  <p>How many questions would you like today?</p>
+	  <form action="/" method="post">
+	  	<input type="number" name="amt_of_questions" onkeypress="return isNumberKey(event)">
+	  	<input type="submit">   	
+	  </form> 
+	</div>
+	<div>
+		<h3> <%= @title %></h3>
+		
+		<% @questions.each do |question| %>    
+	    <div>
+	      <%= question.question_id %>  
+	    </div>
+	  <% end %>	
+  </div>
+</div>
+
+
